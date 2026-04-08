@@ -7,7 +7,10 @@ This repository contains a standard operating procedure (SOP) that I use to buil
 I am a Master's student in Digital Transformation Intelligence (DTI), applying this approach to real-world systems ranging from ERP, monitoring dashboards, to AI-integrated platforms.
 
 Website: [80xstudio.com](https://80xstudio.com)
+
 Instagram: [@LUCASMEVOYEZ](https://instagram.com/LUCASMEVOYEZ)
+
+LinkedIn: [Muhammad Abiyyu Rahman](www.linkedin.com/in/muhammadabiyyurahman)
 
 ---
 
