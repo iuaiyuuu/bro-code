@@ -45,7 +45,22 @@ Defines how AI reads and executes the project. This file is universal and reusab
 
 ### Step 1 — Describe Your App to AI
 
-Start a new session with your AI, then describe the application you want to build. Use the following prompt to generate the four core documents:
+Start a new session with your AI, then describe the application you want to build as clearly and specifically as possible.
+
+You MUST include:
+- Application purpose and core problem
+- Target users and roles
+- Main features (list them clearly)
+- Preferred tech stack (e.g., Next.js, Flutter, Node.js, Supabase, PostgreSQL, etc.)
+- System type (web app, mobile app, SaaS, internal tool, etc.)
+- Data requirements (what data is stored, processed, or analyzed)
+- Key workflows (step-by-step user or system flows)
+- Integrations (APIs, third-party services, etc.)
+- Constraints (performance, security, offline support, etc.)
+
+Avoid vague descriptions. Be explicit and structured.
+
+Then use the following prompt to generate the four core documents:
 
 ```
 From this conversation, generate the following files:
