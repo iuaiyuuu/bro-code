@@ -58,12 +58,45 @@ Contains:
 - Main features  
 - Use cases  
 
+Additional rules:
+- Assign a unique Feature ID (F-XXX) for every feature
+- Every Feature ID MUST be documented in FEATURE_SPEC.md using this exact format:
+
+  F-XXX Feature Name  
+
+  Description:  
+  <non-technical explanation>  
+
+  How it works:  
+  <simple system flow>  
+
+  Role:  
+  <user/admin/system>  
+
+  Status:  
+  <Active / Updated / Deprecated>  
+
+---
+
 ARCHITECTURE.md  
 Contains:
 - System design (frontend, backend, database)  
 - Technology stack  
 - Data flow  
 - System integrations  
+
+Additional rules:
+- Each component MUST reference at least one Feature ID (F-XXX)
+- Any structural, logic, or integration change MUST be recorded in CHANGELOG_SYSTEM.md using this exact format:
+
+  [DATE] F-XXX FEATURE_NAME  
+
+  Type: ADD / MODIFY / DELETE  
+  Files: <list of affected files>  
+  Purpose: <reason for change>  
+  Impact: <effect on system behavior>  
+
+---
 
 AI_RULES.md  
 Contains:
@@ -72,12 +105,67 @@ Contains:
 - Output format  
 - Guardrails  
 
+Additional rules:
+- AI MUST generate a CHANGELOG_SYSTEM.md entry for every:
+  - new feature
+  - logic change
+  - bug fix affecting behavior
+
+- Each entry MUST follow this exact format:
+
+  [DATE] F-XXX FEATURE_NAME  
+
+  Type: ADD / MODIFY / DELETE  
+  Files: <list of affected files>  
+  Purpose: <reason for change>  
+  Impact: <effect on system behavior>  
+
+- AI MUST update FEATURE_SPEC.md if the change:
+  - introduces a new feature
+  - modifies feature behavior
+
+- FEATURE_SPEC.md MUST follow this exact format:
+
+  F-XXX Feature Name  
+
+  Description:  
+  <non-technical explanation>  
+
+  How it works:  
+  <simple system flow>  
+
+  Role:  
+  <user/admin/system>  
+
+  Status:  
+  <Active / Updated / Deprecated>  
+
+- AI MUST reject completion if:
+  - CHANGELOG_SYSTEM.md is not updated
+  - FEATURE_SPEC.md is missing or inconsistent
+
+---
+
 IMPLEMENTATION_PLAN.md  
 Contains:
 - Task breakdown  
 - Execution order  
 - Development priorities  
 - Timeline and execution strategy  
+
+Additional rules:
+- Every task MUST include:
+  - Feature ID (F-XXX)
+
+- Every task MUST enforce this workflow:
+
+  1. Implement code  
+  2. Update CHANGELOG_SYSTEM.md (required format)  
+  3. Update FEATURE_SPEC.md (if feature is affected)  
+
+- A task is NOT considered DONE unless:
+  - CHANGELOG_SYSTEM.md entry exists and is valid
+  - FEATURE_SPEC.md reflects the latest feature state
 ```
 
 ---
