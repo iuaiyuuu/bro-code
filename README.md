@@ -1,4 +1,5 @@
 # Vibe Coding SOP - Newbie Only
+![image](https://github.com/user-attachments/assets/231363f1-e252-43b9-ab73-7c9fe887fc09)
 
 ## About This Repository
 
